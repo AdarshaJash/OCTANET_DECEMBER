@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('images/2.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+input {
+    width: 80%;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: 2px solid #dcdfe1;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1a73e8;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1669c1;
+}
+
+main {
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.03);
+}
+
+li.completed {
+    color: #6c757d;
+    text-decoration: line-through;
+}
+
+button.edit, button.delete, button.mark-complete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button.edit {
+    color: #ffc107;
+}
+
+button.delete {
+    color: #dc3545;
+}
+
+button.mark-complete {
+    color: #28a745;
+}
+
+button.edit:hover {
+    background-color: #fef3cd;
+}
+
+button.delete:hover {
+    background-color: #f8d7da;
+}
+
+button.mark-complete:hover {
+    background-color: #e6f9e6;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+footer p {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
