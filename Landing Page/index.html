@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f4f8fb;
+        }
+        .hero {
+            background: linear-gradient(to bottom, #6a11cb, #2575fc), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .hero .btn {
+            background: #ff7e5f;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+        .hero .btn:hover {
+            background: #feb47b;
+            transform: scale(1.1);
+        }
+        .features-section {
+            padding: 60px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        .features-section h2 {
+            font-size: 3rem;
+            color: #2575fc;
+            margin-bottom: 2rem;
+        }
+        .features-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 250px;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .feature-card h3 {
+            font-size: 1.8rem;
+            color: #2575fc;
+            margin-bottom: 1.2rem;
+        }
+        .feature-card p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .products-section {
+            padding: 60px 20px;
+            background: #f4f8fb;
+        }
+        .products-title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #2575fc;
+            text-align: center;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-details p {
+            margin: 0 0 15px;
+            color: #666;
+        }
+
+        .product-details .btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            background-color: #2575fc;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .product-details .btn:hover {
+            background: #ff7e5f;
+            transform: scale(1.05);
+        }
+        .contact-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 3rem;
+            color: #2575fc;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .proudly-indian {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Discover WE Electronics</h1>
+        <p>Your gateway to innovative technology and unmatched style.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+    <section class="features-section">
+        <h2>Why Choose Us?</h2>
+        <div class="features-cards">
+            <div class="feature-card">
+                <h3>Latest Technology</h3>
+                <p>We provide the best tech that enhances your life. From smartphones to laptops, our products are built for the future.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Exceptional Design</h3>
+                <p>Our products are as beautiful as they are functional. Experience elegant, minimalist designs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Unbeatable Performance</h3>
+                <p>Get the best performance with state-of-the-art processors and features that never let you down.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Customer Satisfaction</h3>
+                <p>Our customers are our top priority. We provide outstanding customer support and service.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Affordable Prices</h3>
+                <p>We believe that cutting-edge technology should be accessible to everyone. Get the best value for your money.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Eco-Friendly</h3>
+                <p>Our products are designed with sustainability in mind. We strive to reduce our environmental impact.</p>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="products-section">
+        <h2 class="products-title">Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/WE Phone.jpg" alt="WE Phone" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Phones</h3>
+                    <p>Experience next-level communication with our high-performance smartphones.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE Laptop.jpg" alt="WE Laptop" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Laptops</h3>
+                    <p>Lightweight and powerful laptops for productivity on the go.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE Tablet.jpg" alt="WE Tablet" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Tablets</h3>
+                    <p>Get the perfect balance of portability and power with our tablets.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE TV 4K.jpg" alt="WE Desktop" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Desktop</h3>
+                    <p>Powerful desktop computers designed for professionals and gamers.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE Headphones.jpg" alt="WE Earphones" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Earphones</h3>
+                    <p>High-quality sound with noise cancellation for the ultimate audio experience.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE Tags.jpg" alt="WE Tag" loading="lazy">
+                <div class="product-details">
+                    <h3>WE Tag</h3>
+                    <p>Your personal tracker for keeping tabs on your valuable items.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE TV.webp" alt="WE TV 4K" loading="lazy">
+                <div class="product-details">
+                    <h3>WE TV 4K</h3>
+                    <p>Ultra HD smart TVs with stunning clarity and color.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE SmartHome.jpg" alt="WE SmartHome" loading="lazy">
+                <div class="product-details">
+                    <h3>WE SmartHome</h3>
+                    <p>Automate your home with our smart devices for comfort and convenience.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/WE Accessories.jpg" alt="Accessories" loading="lazy">
+                <div class="product-details">
+                    <h3>Accessories</h3>
+                    <p>Complete your tech experience with our premium accessories.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> thewecompany0161@gmail.com</p>
+            <p><strong>Phone:</strong> +91 99337 02308</p>
+            <p><strong>Address:</strong> Newtown Kolkata WB India</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright &copy; 2024 WE Electronics Inc. All rights reserved.</p>
+        <p>More ways to shop: Find a WE Store or other retailer near you. Or call +91 99337 02308.</p>
+        <p>
+            <a href="#">Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</a>
+        </p>
+        <p class="proudly-indian">Proudly Indian</p>
+        <p>Designed by ADARSHA JASH</p>
+    </footer>
+</body>
+</html>
